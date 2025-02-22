@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Available</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0a0a0a;
+            color: #00ffcc;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: glow 2s infinite alternate;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #ccc;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+            }
+            100% {
+                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
+            }
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, #0a0a0a 20%, #0a0a0a 80%, transparent 80%, transparent),
+                        radial-gradient(circle, transparent 20%, #0a0a0a 20%, #0a0a0a 80%, transparent 80%, transparent) 50px 50px;
+            background-size: 100px 100px;
+            animation: moveBackground 4s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>This Page Is Not Available Yet</h1>
+        <p>We're working on something awesome! Please stay tuned.</p>
+    </div>
+</body>
+</html>
